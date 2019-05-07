@@ -1,0 +1,17 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>IMAMED - Finante</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" th:ref="@{/css/style.css}"/>
+</head>
+    <body>
+        <form role="form" th:action="@{/login}" method="POST">
+            <h1>AUTENTIFICARE</h1>
+            <input type="text" required="required" name="username" autofocus="" placeholder="Utilizator"/>
+            <input type="password" required="required" name="password" placeholder="Parola"/>
+            <button type="submit">LOGIN</button>
+            <div th:if="${param.error}" class="login-error">
+                <h4>Credentialele sunt invalide!</h4>
+            </div>
+        </form>
+    </body>
+</html>
