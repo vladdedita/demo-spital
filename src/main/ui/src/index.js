@@ -3,12 +3,13 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import rootReducer from "./reducers/index";
+import rootReducer from "./reducer/index";
 import {applyMiddleware} from "redux";
 import {createStore} from "redux/es/redux";
 import {Provider} from "react-redux";
 import thunk from "redux-thunk";
 import axios from 'axios';
+import {SnackbarProvider} from 'notistack';
 import {composeWithDevTools} from 'redux-devtools-extension';
 
 const store = createStore( rootReducer, composeWithDevTools(
