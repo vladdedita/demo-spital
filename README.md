@@ -1,2 +1,1 @@
-# boilerplate
-Different project templates
+# demo-spital
