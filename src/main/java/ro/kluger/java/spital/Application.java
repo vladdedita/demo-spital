@@ -1,4 +1,4 @@
-package ro.demo.boilerplate;
+package ro.kluger.java.spital;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

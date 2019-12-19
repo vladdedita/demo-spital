@@ -1,12 +1,12 @@
 import React from 'react'
 import {Switch, Route} from "react-router";
-import asyncComponent from "../HOC/asyncComponents"
+import asyncComponent from "../HOC/asyncComponent"
 
 export default (props) => {
-    // let asyncBugetComponent = asyncComponent( () => import ("../Buget/Buget"));
+    // let asyncExampleComponent = asyncComponent( () => import ("../Example/Example"));
     return (
         <Switch>
-            {/*<Route path = '/utilizatori' component={asyncUtilizatorComponent}/>*/}
+            {/*<Route path = '/example' component={asyncExampleComponent}/>*/}
         </Switch>
     )
 }

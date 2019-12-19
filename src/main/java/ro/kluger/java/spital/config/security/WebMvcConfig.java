@@ -1,4 +1,4 @@
-package ro.demo.boilerplate.config.security;
+package ro.kluger.java.spital.config.security;
 
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;

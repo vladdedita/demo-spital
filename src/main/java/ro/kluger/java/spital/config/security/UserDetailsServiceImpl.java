@@ -1,4 +1,4 @@
-package ro.demo.boilerplate.config.security;
+package ro.kluger.java.spital.config.security;
 
 //@Component
 //public class UserDetailsServiceImpl implements UserDetailsService {
