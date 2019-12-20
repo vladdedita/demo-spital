@@ -43,7 +43,7 @@ public class ProgramareFilterService {
 
     private BooleanBuilder dateClause(BooleanBuilder where, Date date){
         if(date!=null){
-            return where.and(SQLExpressions)
+            return where.and(null);
         }
         return where;
     }
