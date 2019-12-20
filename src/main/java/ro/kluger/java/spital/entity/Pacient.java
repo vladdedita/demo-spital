@@ -29,6 +29,6 @@ public class Pacient
     private String tel;
     @JoinColumn(name = "persoana_cnp")
     @ManyToOne
-    private Persoane persoane;
+    private Persoana persoana;
 
 }

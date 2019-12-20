@@ -20,7 +20,7 @@ import java.io.Serializable;
 @NoArgsConstructor
 @AllArgsConstructor
 @Table(name = "persoane", schema = "public")
-public class Persoane
+public class Persoana
     implements Serializable
 {
 
