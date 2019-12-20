@@ -1,8 +1,8 @@
-package ro.kluger.java.spital.config.security;
-
+//package ro.kluger.java.spital.config.security;
+//
 //@Component
 //public class UserDetailsServiceImpl implements UserDetailsService {
-
+//
 //    String ROLE_PREFIX = "ROLE_";
 //
 //    @Autowired
@@ -34,5 +34,5 @@ package ro.kluger.java.spital.config.security;
 //        });
 //        return roles;
 //    }
-
+//
 //}
