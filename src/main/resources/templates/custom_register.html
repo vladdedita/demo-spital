@@ -1,0 +1,20 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" th:ref="@{/css/style.css}"/>
+</head>
+    <body>
+        <form role="form" th:action="@{/register}" method="POST">
+            <h1>INREGISTRARE</h1>
+            <input type="text" required="required" name="name" autofocus="" placeholder="Nume"/>
+            <input type="text" required="required" name="cnp" autofocus="" placeholder="CNP" maxlength="10"/>
+            <input type="text" required="required" name="username" autofocus="" placeholder="Username"/>
+            <input type="password" required="required" name="password1" placeholder="Parola"/>
+            <input type="password" required="required" name="password2" placeholder="Reintroduceti parola"/>
+            <button type="submit">Inregistrare</button>
+            <div th:if="${param.error}" class="login-error">
+                <h4>A aparut o eroare!</h4>
+            </div>
+        </form>
+    </body>
+</html>

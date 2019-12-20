@@ -25,12 +25,13 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
         httpSecurity
                 .csrf().disable().authorizeRequests()
-                .antMatchers( "/asset-manifest.json",
+                .antMatchers("/asset-manifest.json",
                         "/favicon.ico",
                         "/index.html",
                         "/service-worker.js",
                         "/css/**",
-                        "/static/**")
+                        "/static/**,",
+                        "/register")
                 .permitAll()
                 .anyRequest().authenticated()
                 .and()
