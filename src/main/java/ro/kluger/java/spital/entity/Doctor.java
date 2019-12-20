@@ -27,6 +27,6 @@ public class Doctor
     private Integer id;
     @JoinColumn(name = "persoana_cnp")
     @ManyToOne
-    private Persoane persoane;
+    private Persoana persoana;
 
 }

@@ -16,8 +16,8 @@ import java.io.Serializable;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name = "users", schema = "public")
-public class Users
+@Table(name = "userrole", schema = "public")
+public class UserRole
     implements Serializable
 {
 
@@ -25,12 +25,11 @@ public class Users
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false, length = 10, columnDefinition = "INT")
     private Integer id;
-    @Column(name = "pass", nullable = true, length = 255, columnDefinition = "VARCHAR")
-    private String pass;
-    @Column(name = "username", nullable = true, length = 255, columnDefinition = "VARCHAR")
-    private String username;
-    @JoinColumn(name = "persoana_cnp")
+    @JoinColumn(name = "id_user")
     @ManyToOne
-    private Persoane persoane;
+    private User user;
+    @JoinColumn(name = "id_role")
+    @ManyToOne
+    private Role role;
 
 }
