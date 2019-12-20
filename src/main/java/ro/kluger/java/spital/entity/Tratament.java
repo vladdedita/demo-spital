@@ -27,7 +27,8 @@ public class Tratament
     private Integer id;
     @Column(name = "nume", nullable = true, length = 255, columnDefinition = "VARCHAR")
     private String nume;
-    @Column(name = "programare_id", nullable = true, length = 10, columnDefinition = "INT")
-    private Integer programareId;
+    @JoinColumn(name = "programare_id")
+    @ManyToOne
+    private Programare programare;
 
 }

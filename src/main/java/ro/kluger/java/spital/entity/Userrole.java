@@ -23,9 +23,13 @@ public class Userrole
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id_user", nullable = false, length = 10, columnDefinition = "INT")
-    private Integer idUser;
-    @Column(name = "id_role", nullable = true, length = 10, columnDefinition = "INT")
-    private Integer idRole;
+    @Column(name = "id", nullable = false, length = 10, columnDefinition = "INT")
+    private Integer id;
+    @JoinColumn(name = "id_user")
+    @ManyToOne
+    private Users users;
+    @JoinColumn(name = "id_role")
+    @ManyToOne
+    private Role role;
 
 }

@@ -27,7 +27,8 @@ public class Pacient
     private Integer id;
     @Column(name = "tel", nullable = true, length = 255, columnDefinition = "VARCHAR")
     private String tel;
-    @Column(name = "persoana_cnp", nullable = true, length = 10, columnDefinition = "INT")
-    private Integer persoanaCnp;
+    @JoinColumn(name = "persoana_cnp")
+    @ManyToOne
+    private Persoane persoane;
 
 }

@@ -25,7 +25,8 @@ public class Doctor
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false, length = 10, columnDefinition = "INT")
     private Integer id;
-    @Column(name = "persoana_cnp", nullable = true, length = 10, columnDefinition = "INT")
-    private Integer persoanaCnp;
+    @JoinColumn(name = "persoana_cnp")
+    @ManyToOne
+    private Persoane persoane;
 
 }

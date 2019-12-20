@@ -16,8 +16,8 @@ import java.io.Serializable;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name = "user", schema = "public")
-public class User
+@Table(name = "users", schema = "public")
+public class Users
     implements Serializable
 {
 
@@ -29,7 +29,8 @@ public class User
     private String pass;
     @Column(name = "username", nullable = true, length = 255, columnDefinition = "VARCHAR")
     private String username;
-    @Column(name = "persoana_cnp", nullable = true, length = 19, columnDefinition = "BIGINT")
-    private Long persoanaCnp;
+    @JoinColumn(name = "persoana_cnp")
+    @ManyToOne
+    private Persoane persoane;
 
 }

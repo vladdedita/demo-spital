@@ -29,11 +29,14 @@ public class Programare
     @Column(name = "ora_programare", nullable = true, length = 19, columnDefinition = "TIMESTAMP")
     @Temporal(TemporalType.TIMESTAMP)
     private Date oraProgramare;
-    @Column(name = "doctor_id", nullable = true, length = 10, columnDefinition = "INT")
-    private Integer doctorId;
-    @Column(name = "pacient_id", nullable = true, length = 10, columnDefinition = "INT")
-    private Integer pacientId;
-    @Column(name = "status_id", nullable = true, length = 10, columnDefinition = "INT")
-    private Integer statusId;
+    @JoinColumn(name = "doctor_id")
+    @ManyToOne
+    private Doctor doctor;
+    @JoinColumn(name = "pacient_id")
+    @ManyToOne
+    private Pacient pacient;
+    @JoinColumn(name = "status_id")
+    @ManyToOne
+    private Status status;
 
 }
